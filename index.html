@@ -416,6 +416,13 @@ h1{line-height:1.24}
   .acciones-movil{display:grid;gap:12px;margin-top:-20px;position:relative;z-index:2}
   .acciones-movil .boton{width:100%}
 }
+/* Portada nueva */
+.portada h1{display:grid;gap:14px}
+.sub-h1{display:block;font-family:var(--texto);font-weight:500;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;color:var(--oro-claro)}
+.firma{display:grid;gap:4px;border-left:3px solid var(--oro);padding-left:16px;max-width:46ch}
+.firma b{font:400 clamp(1.25rem,2.4vw,1.55rem)/1.2 var(--titulo);color:var(--hoja)}
+.firma span{color:#dfe6ea;font-size:1rem;line-height:1.45}
+@media (max-width:400px){.boton-tel{padding:8px 12px;font-size:.9rem;gap:7px}.boton-tel img{width:20px;height:20px}.logo{height:42px}.cabeza .ancho{padding-inline:14px}}
 </style>
 
 <script type="application/ld+json">
@@ -460,12 +467,10 @@ h1{line-height:1.24}
   <div class="capa-fondo" data-capa="0.22" aria-hidden="true"></div>
   <div class="ancho">
     <div class="portada-texto">
-      <h1>Abogado laboral, familiar, civil y mercantil en Aguascalientes</h1>
-      <div class="chat" aria-label="Ejemplo de conversación">
-        <p class="respuesta">Soy el Lic. Juan Ramón Jiménez. Le explico sus opciones legales de forma sencilla y le acompañaré en cada paso del proceso.</p>
-      </div>
+      <h1>¿Tienes un problema legal?<span class="sub-h1">Conoce tus opciones antes de tomar una decisión.</span></h1>
+      <p class="firma"><b>Lic. Juan Ramón Jiménez</b><span>Abogado laboral, familiar, civil y mercantil en Aguascalientes.</span></p>
       <div class="acciones acciones-portada">
-        <a class="boton boton-1 brillo" data-wa="Buen día, Lic. Jiménez. Quiero agendar una asesoría." href="https://wa.me/524495544447">Agendar asesoría por WhatsApp</a>
+        <a class="boton boton-1 brillo" data-wa="Buen día, Lic. Jiménez. Quiero agendar una asesoría." href="https://wa.me/524495544447">Consultar mi caso por WhatsApp</a>
         <a class="boton boton-2" href="tel:+524495544447">Llamar al 449 554 4447</a>
       </div>
     </div>
@@ -473,7 +478,7 @@ h1{line-height:1.24}
       <figure class="retrato-marco"><img src="retrato.webp" alt="Lic. Juan Ramón Jiménez, abogado" width="700" height="1244"></figure>
     </div>
     <div class="acciones acciones-movil">
-        <a class="boton boton-1 brillo" data-wa="Buen día, Lic. Jiménez. Quiero agendar una asesoría." href="https://wa.me/524495544447">Agendar asesoría por WhatsApp</a>
+        <a class="boton boton-1 brillo" data-wa="Buen día, Lic. Jiménez. Quiero agendar una asesoría." href="https://wa.me/524495544447">Consultar mi caso por WhatsApp</a>
         <a class="boton boton-2" href="tel:+524495544447">Llamar al 449 554 4447</a>
       </div>
 
@@ -519,7 +524,7 @@ h1{line-height:1.24}
       <h3>Derecho civil</h3>
       <div class="area-foto"><img loading="lazy" src="civil.webp" alt="Llaves sobre un contrato de arrendamiento" width="1168" height="880"></div>
       <div class="area-texto">
-        <p class="frase">“Me deben dinero” o “mi inquilino ya no paga”</p>
+        <p class="frase">“Mi inquilino ya no paga”</p>
         <p>Asesoría y representación en conflictos entre particulares, patrimoniales o personales.</p>
         <ul class="servicios"><li>Contratos</li><li>Arrendamientos</li><li>Reclamaciones por daños</li><li>Deudas</li></ul>
         <button class="abrir" type="button" aria-expanded="false" aria-controls="faq-civil"><span class="abrir-texto">Preguntas frecuentes</span><span class="flecha" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l7 7 7-7"/></svg></span></button>
