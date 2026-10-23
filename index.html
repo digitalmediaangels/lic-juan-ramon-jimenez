@@ -403,6 +403,19 @@ h1{line-height:1.24}
   .justicia-foto{margin-inline:-20px;max-height:420px;overflow:hidden}
   .justicia-foto img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 25%);mask-image:linear-gradient(180deg,transparent 0,#000 25%)}
 }
+/* Ajustes celular: botones bajo la foto y frases en globo */
+.acciones-movil{display:none}
+.area .frase{position:relative;justify-self:start;max-width:min(calc(100% - 18px),440px);margin-left:18px;padding:12px 18px;background:#4a7797;color:#fff;font-weight:500;border-radius:20px 20px 20px 0;filter:drop-shadow(0 6px 10px rgba(4,14,22,.22))}
+.area .frase::after{content:"";position:absolute;left:-18px;bottom:0;width:18px;height:20px;background:radial-gradient(circle at 0 0,transparent 18px,#4a7797 18.6px)}
+@media (max-width:860px){
+  .acciones-portada{display:none}
+  .portada .ancho{row-gap:20px;padding-bottom:22px}
+  .portada-texto{padding-bottom:0}
+  .retrato-capa{transform:none!important;margin-inline:auto;max-width:320px;width:100%}
+  .retrato-marco img{max-height:440px;margin-bottom:0}
+  .acciones-movil{display:grid;gap:12px;margin-top:-20px;position:relative;z-index:2}
+  .acciones-movil .boton{width:100%}
+}
 </style>
 
 <script type="application/ld+json">
@@ -449,10 +462,9 @@ h1{line-height:1.24}
     <div class="portada-texto">
       <h1>Abogado laboral, familiar, civil y mercantil en Aguascalientes</h1>
       <div class="chat" aria-label="Ejemplo de conversación">
-        <div class="burbuja cliente"><p class="dicho" id="dicho" aria-live="off">“Me despidieron y no sé qué me corresponde”</p></div>
         <p class="respuesta">Soy el Lic. Juan Ramón Jiménez. Le explico sus opciones legales de forma sencilla y le acompañaré en cada paso del proceso.</p>
       </div>
-      <div class="acciones">
+      <div class="acciones acciones-portada">
         <a class="boton boton-1 brillo" data-wa="Buen día, Lic. Jiménez. Quiero agendar una asesoría." href="https://wa.me/524495544447">Agendar asesoría por WhatsApp</a>
         <a class="boton boton-2" href="tel:+524495544447">Llamar al 449 554 4447</a>
       </div>
@@ -460,6 +472,11 @@ h1{line-height:1.24}
     <div class="retrato-capa" data-capa="-0.08">
       <figure class="retrato-marco"><img src="retrato.webp" alt="Lic. Juan Ramón Jiménez, abogado" width="700" height="1244"></figure>
     </div>
+    <div class="acciones acciones-movil">
+        <a class="boton boton-1 brillo" data-wa="Buen día, Lic. Jiménez. Quiero agendar una asesoría." href="https://wa.me/524495544447">Agendar asesoría por WhatsApp</a>
+        <a class="boton boton-2" href="tel:+524495544447">Llamar al 449 554 4447</a>
+      </div>
+
   </div>
 </section>
 
@@ -668,10 +685,6 @@ h1{line-height:1.24}
   function wa(t){return 'https://wa.me/'+TEL+'?text='+encodeURIComponent(t)}
   document.querySelectorAll('[data-wa]').forEach(function(a){a.href=wa(a.dataset.wa)});
 
-  /* Frases que rotan en la portada */
-  var frases=['“Me despidieron y no sé qué me corresponde”','“Nos vamos a separar y me preocupan mis hijos”','“Mi inquilino ya no paga la renta”','“Me deben dinero y no me contestan”','“Quiero proteger mi negocio”'];
-  var dicho=document.getElementById('dicho'),n=0;
-  if(!calma){setInterval(function(){dicho.classList.add('sale');setTimeout(function(){n=(n+1)%frases.length;dicho.textContent=frases[n];dicho.classList.remove('sale')},450)},3400)}
 
   /* Capas en movimiento, barra de avance y cabecera */
   var capas=[].slice.call(document.querySelectorAll('[data-capa]')),avance=document.getElementById('avance'),cabeza=document.getElementById('cabeza'),espera=false;
